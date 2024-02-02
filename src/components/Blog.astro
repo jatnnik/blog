@@ -2,23 +2,34 @@
 import { titleCase } from "title-case";
 import { getCollection } from "astro:content";
 import FormattedDate from "./FormattedDate.astro";
-import Prose from "./Prose.astro";
 
 const posts = (await getCollection("blog"))
-  .filter((post) => post.data.published)
+  .filter((post) => {
+    // In dev mode, show also posts that are not published yet.
+    if (import.meta.env.DEV) {
+      return true;
+    }
+
+    return post.data.published;
+  })
   .sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf());
 ---
 
-<Prose>
-  <h2>Blog</h2>
+<div>
+  <h2 class="text-lg font-semibold tracking-tighter mb-[0.8em]">Blog</h2>
 
-  <ul>
+  <ul class="space-y-2">
     {
       posts.map((post) => (
         <li>
-          <a href={`/${post.slug}/`} class="flex justify-between no-underline">
-            <p class="underline">{titleCase(post.data.title)}</p>
-            <p class="shrink-0 tabular-nums text-base-300">
+          <a
+            href={`/${post.slug}/`}
+            class="flex justify-between no-underline text-sm"
+          >
+            <p class="underline font-medium text-[#1c1917]">
+              {titleCase(post.data.title)}
+            </p>
+            <p class="shrink-0 tabular-nums italic text-base-300">
               <FormattedDate date={post.data.pubDate} />
             </p>
           </a>
@@ -26,4 +37,4 @@ const posts = (await getCollection("blog"))
       ))
     }
   </ul>
-</Prose>
+</div>
