@@ -18,6 +18,7 @@ Getting to the point – this is how I cooked my blog:
 - [Lucide Icons](https://lucide.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind](https://tailwindcss.com) for styling
+- Deployed at [Vercel](https://vercel.com)
 - [Visual Electric](https://visualelectric.com/), an AI powered image generation service
 
 ## Design
