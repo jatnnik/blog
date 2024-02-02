@@ -16,6 +16,7 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{title || "Jannik's Blog"}</title>
+    <meta property="og:title" content={title || "Jannik's Blog"} />
 
     <link rel="preconnect" href="https://fonts.bunny.net" />
     <link
