@@ -1,7 +1,6 @@
 ---
 title: "Cooking up my Blog"
 pubDate: 2024-02-02
-updatedDate: 2024-02-04
 image: "/posts/2024/cooking-up-my-blog.jpg"
 published: true
 ---
