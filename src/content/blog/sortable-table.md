@@ -12,7 +12,7 @@ To get started, you should have a basic controller that fetches your records fro
 
 ## Extract a table heading component
 
-To avoid redundancy, create a table heading component. Mine is stored in `resources/views/components/table/heading.blade.php`.
+To avoid redundancy, create a table heading component.
 
 ```html
 <!-- The components props. -->
