@@ -1,6 +1,7 @@
 ---
 title: Building a sortable table with Laravel and Alpine.js
 pubDate: 2024-02-03
+updatedDate: 2024-02-04
 published: true
 ---
 
@@ -157,7 +158,7 @@ null ])
 <form>...</form>
 
 <!-- New form -->
-<form x-init x-target="{{ $target }}" x-target.replace>...</form>
+<form x-init x-target.replace="{{ $target }}">...</form>
 ```
 
 Don't forget to pass the target ID to the table heading component:
@@ -177,7 +178,6 @@ Don't forget to pass the target ID to the table heading component:
 Here's a short explanation what these attributes do:
 
 - `x-init` enables Alpine.js for the form
-- `x-target` tells Alpine AJAX which DOM element we want to update by using it's `id`
-- `x-target.replace` replaces the current URL with the new one – handy for sharing/saving links to a sorted table
+- `x-target.replace` tells Alpine AJAX which DOM element we want to update by using it's `id` and replaces the current URL with the new one – handy for sharing/saving links to a sorted table
 
 Behind the scenes, Alpine AJAX will perform the `GET` request to the "new" page and replace the target element with the new element.
