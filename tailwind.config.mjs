@@ -57,7 +57,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Inter", "system-ui"],
+        sans: ["Overpass", "system-ui"],
         handwriting: ["Caveat", "handwriting"],
       },
     },
