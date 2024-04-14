@@ -10,7 +10,7 @@ Let's look at two simple examples for object oriented and functional code. I wro
 
 ## Object Oriented
 
-Let's say you have a cat, and now you want to describe that cat in code. Your cat has multiple _properties_ like name, age, fur color etc. She also has some _methods_, or interactions like purring, meowing etc.
+Let's say you have a cat, and now you want to describe that cat in code. Your cat has multiple _properties_ like name, age, fur color etc. She also has some _methods_, or interactions, like purring, meowing etc.
 
 Using an object oriented approach, you would create a `Cat` class, which is like a blueprint for a cat. Your cat would then be an _instance_ of the class.
 
