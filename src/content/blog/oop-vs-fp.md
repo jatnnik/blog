@@ -72,7 +72,7 @@ class Cat {
 }
 ```
 
-By increasing the `strokeCount` field, we modified local state. Imagine we do this in many places and now you need to debug where a buggy state assignment happens – this can quickly get a bit chaotic. So using pure functions with no side effects, which always generate the same output for a given input, we make our code simpler.
+By increasing the `strokeCount` field, we modified local state. Imagine we do this in many places and now you need to debug where a buggy state assignment happens – this can quickly get a bit chaotic. So by using pure functions with no side effects, which always generate the same output for a given input, we make our code simpler.
 
 Let's look at the functional code for our cat:
 
