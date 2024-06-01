@@ -1,10 +1,10 @@
 ---
 import { titleCase } from "title-case";
-import { getCollection } from "astro:content";
+import { getCollection, type CollectionEntry } from "astro:content";
 import FormattedDate from "./FormattedDate.astro";
 
 const posts = (await getCollection("blog"))
-  .filter((post) => post.data.published)
+  .filter((post) => (import.meta.env.DEV ? true : post.data.published))
   .sort(
     (a, b) =>
       new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime(),
