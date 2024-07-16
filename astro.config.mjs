@@ -7,7 +7,7 @@ export default defineConfig({
   integrations: [tailwind()],
   markdown: {
     shikiConfig: {
-      theme: "github-dark",
+      theme: "catppuccin-mocha",
     },
   },
 });
