@@ -14,6 +14,7 @@ A (growing) collection of beautiful fonts that I like to use. ~All~ Most of them
 - Newsreader
 - Operator Mono (paid)
 - Verlag (paid)
+- Hanken Grotesk
 
 ## Type Foundries
 
