@@ -18,13 +18,9 @@ const { title } = Astro.props;
     <title>{title || "Jannik's Blog"}</title>
     <meta property="og:title" content={title || "Jannik's Blog"} />
 
-    <link rel="preconnect" href="https://rsms.me/" />
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.bunny.net" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
+      href="https://fonts.bunny.net/css?family=fira-sans:400,400i,500,600"
       rel="stylesheet"
     />
 
@@ -34,7 +30,7 @@ const { title } = Astro.props;
     />
   </head>
   <body
-    class="antialiased bg-neutral-100 text-zinc-700 flex flex-col min-h-svh"
+    class="antialiased bg-neutral-100 text-zinc-700 flex flex-col min-h-svh max-w-screen-lg mx-auto"
   >
     <Header />
     <main class="grow p-8">

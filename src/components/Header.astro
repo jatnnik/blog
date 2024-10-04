@@ -1,8 +1,25 @@
-<header class="p-8 flex justify-between items-center">
-  <a href="/" class="font-semibold text-xl italic font-serif text-red-600"
-    >jannbar</a
-  >
+---
+import { Image } from "astro:assets";
+---
 
-  <a href="https://github.com/jannbar" target="_blank" class="text-xs">GitHub</a
+<header class="p-8 flex justify-between items-center">
+  <div class="flex items-center space-x-4">
+    <Image
+      src="/me.jpg"
+      width="40"
+      height="40"
+      loading="eager"
+      alt="A portrait of me."
+      class="rounded-full size-10 border-2 border-dashed border-zinc-300"
+    />
+    <a href="/" class="font-medium text-base">Jannik Baranczyk</a>
+  </div>
+
+  <a
+    href="https://github.com/jannbar"
+    target="_blank"
+    class="text-sm hover:underline"
   >
+    GitHub
+  </a>
 </header>

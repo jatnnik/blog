@@ -4,8 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter", "system-ui"],
-        serif: ["Newsreader", "serif"],
+        sans: ["Fira Sans", "system-ui"],
         handwriting: ["Caveat", "handwriting"],
       },
     },
