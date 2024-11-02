@@ -2,6 +2,7 @@
 import BaseHead from "../components/BaseHead.astro"
 import Container from "../components/Container.astro"
 import Header from "../components/Header.astro"
+import Posts from "../components/Posts.astro"
 import { SITE_INFO } from "../constants"
 ---
 
@@ -16,7 +17,9 @@ import { SITE_INFO } from "../constants"
         <Header />
       </Container>
 
-      <div class="flex-1"></div>
+      <Container>
+        <Posts />
+      </Container>
 
       <footer class="mt-4 text-center text-sm text-zinc-400">
         &copy; Written by a human, {new Date().getFullYear()}.

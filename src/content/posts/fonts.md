@@ -1,7 +1,7 @@
 ---
-title: Beautiful fonts
-pubDate: 2024-02-13
-published: true
+title: Beautiful Fonts
+publishDate: 2024-02-13
+isDraft: false
 ---
 
 A (growing) collection of beautiful fonts that I like to use. ~All~ Most of them are available on Google Fonts.

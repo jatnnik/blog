@@ -1,7 +1,7 @@
 ---
-title: Use Pint as a formatter in Zed
-pubDate: 2024-07-16
-published: true
+title: How to set up Pint as PHP formatter in Zed
+publishDate: 2024-07-16
+isDraft: false
 ---
 
 Just as [Pint](https://github.com/laravel/pint) is an excellent formatter for PHP files,
