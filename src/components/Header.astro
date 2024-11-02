@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets"
+import { HANDLES } from "../constants"
 import MyPortrait from "../assets/me.jpeg"
 import Tag from "./Tag.astro"
 import SectionTitle from "./SectionTitle.astro"
@@ -19,16 +20,29 @@ import SectionTitle from "./SectionTitle.astro"
         height={300}
       />
     </div>
-    <div class="space-y-1">
+    <div class="space-y-2">
       <div>
-        <h1 class="flex scroll-m-20 text-2xl font-semibold tracking-tighter">
+        <h1 class="flex scroll-m-20 text-xl font-semibold tracking-tighter">
           Jannik Baranczyk
         </h1>
         <div class="text-sm text-zinc-500">
-          <p>Senior full-stack developer, coffee lover, music nerd.</p>
+          <p>Full-Stack dev, climber, hobby barista.</p>
         </div>
       </div>
-      <Tag />
+      <div class="flex space-x-2">
+        <Tag
+          label={`@${HANDLES.GITHUB}`}
+          icon="https://github.githubassets.com/favicons/favicon.svg"
+          link={`https://github.com/${HANDLES.GITHUB}`}
+          alt="GitHub"
+        />
+        <Tag
+          label={`@${HANDLES.BLUESKY}`}
+          icon="https://bsky.app/static/favicon-32x32.png"
+          link="https://bsky.app/profile/jatnnik.bsky.social"
+          alt="Bluesky"
+        />
+      </div>
     </div>
   </div>
 
@@ -37,20 +51,16 @@ import SectionTitle from "./SectionTitle.astro"
       <SectionTitle>Hello, friend.</SectionTitle>
 
       <p class="text-sm leading-relaxed text-zinc-500">
-        I currently work as a full stack developer at <a
+        I currently work as a fullstack developer at <a
           href="https://360vier.de"
           target="_blank"
           class="font-medium underline underline-offset-2">360VIER</a
-        >. In my spare time I tinker on some side projects with <a
-          href="https://laravel.com"
-          class="font-medium underline underline-offset-2"
-          target="_blank">Laravel</a
-        >, work on creating the perfect latte art or do something fun with my
-        wife.
+        >. In my free time, I enjoy spending time with my wife, tinkering on
+        little side projects, or hang out at the local climbing gym.
       </p>
 
       <p class="text-sm leading-relaxed text-zinc-500">
-        I also like Laravel and modern PHP development.
+        My tools of choice are Laravel, React, TypeScript and Tailwind.
       </p>
     </div>
   </section>

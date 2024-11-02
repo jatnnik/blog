@@ -1,5 +1,6 @@
 ---
 import BaseHead from "../components/BaseHead.astro"
+import Container from "../components/Container.astro"
 import Header from "../components/Header.astro"
 import { SITE_INFO } from "../constants"
 ---
@@ -10,10 +11,10 @@ import { SITE_INFO } from "../constants"
     <BaseHead title={SITE_INFO.TITLE} description={SITE_INFO.DESCRIPTION} />
   </head>
   <body class="text-zinc-900 antialiased">
-    <main class="my-16 flex flex-col items-center gap-16 md:my-32">
-      <div class="w-full max-w-2xl px-4">
+    <main class="flex min-h-screen flex-col items-center gap-16 py-16 md:py-32">
+      <Container>
         <Header />
-      </div>
+      </Container>
 
       <div class="flex-1"></div>
 
@@ -21,15 +22,5 @@ import { SITE_INFO } from "../constants"
         &copy; Written by a human, {new Date().getFullYear()}.
       </footer>
     </main>
-
-    <script>
-      import { createIcons, Megaphone } from "lucide"
-
-      createIcons({
-        icons: {
-          Megaphone,
-        },
-      })
-    </script>
   </body>
 </html>

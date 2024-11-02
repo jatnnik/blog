@@ -1,5 +1,9 @@
 export const SITE_INFO = {
   TITLE: "Jannik Baranczyk",
-  DESCRIPTION:
-    "Full-Stack Developer with 10+ years experience. My tools of choice are React, TypeScript, Laravel and Tailwind CSS.",
+  DESCRIPTION: "Full-Stack dev, climber, hobby barista.",
+}
+
+export const HANDLES = {
+  GITHUB: "jatnnik",
+  BLUESKY: "jatnnik.bsky.social",
 }

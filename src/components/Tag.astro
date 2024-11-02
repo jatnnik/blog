@@ -1,25 +1,32 @@
-<!-- <div
-  class="inline-flex items-center gap-1 rounded-full bg-amber-100 px-2 py-1 text-amber-800"
->
-  <i data-lucide="megaphone" class="size-4"></i>
-  <div class="text-xs font-semibold">PHP is not dead!</div>
-</div> -->
+---
+import { HANDLES } from "../constants"
+
+interface Props {
+  link: string
+  label: string
+  icon: string
+  alt: string
+}
+
+const { link, label, icon, alt } = Astro.props
+---
+
 <a
   class="inline-flex items-center space-x-1.5 rounded-md border border-zinc-200 px-2 py-1 text-xs font-medium shadow-sm outline-none focus-visible:ring-2 focus-visible:ring-zinc-500 focus-visible:ring-offset-2"
-  href="https://github.com/jatnnik"
+  href={link}
   target="_blank"
-  title="Github"
+  title={alt}
 >
   <img
-    src="https://github.githubassets.com/favicons/favicon.svg"
-    alt="Github"
+    src={icon}
+    {alt}
     class="h-4 w-4"
     loading="eager"
     width="16"
     height="16"
     decoding="async"
   />
-  <span class="text-black">@jatnnik</span>
+  <span>{label}</span>
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -30,8 +37,7 @@
     stroke-width="2"
     stroke-linecap="round"
     stroke-linejoin="round"
-    data-lucide="external-link"
-    class="lucide lucide-external-link size-3 text-zinc-400"
+    class="size-3 text-zinc-400"
     ><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path
       d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg
   >
