@@ -3,7 +3,7 @@ import type { CollectionEntry } from "astro:content"
 import BaseHead from "../components/BaseHead.astro"
 import Footer from "../components/Footer.astro"
 
-type Props = CollectionEntry<"post">["data"]
+type Props = CollectionEntry<"posts">["data"]
 
 const { title, publishDate } = Astro.props
 ---
