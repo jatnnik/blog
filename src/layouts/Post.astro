@@ -1,0 +1,48 @@
+---
+import type { CollectionEntry } from "astro:content"
+import BaseHead from "../components/BaseHead.astro"
+import Footer from "../components/Footer.astro"
+
+type Props = CollectionEntry<"post">["data"]
+
+const { title, publishDate } = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={title} />
+  </head>
+  <body class="text-zinc-900 antialiased selection:bg-amber-100">
+    <main class="space-y-16 py-16 md:py-32">
+      <article
+        class="prose mx-auto max-w-2xl px-6 prose-headings:text-xl prose-headings:font-semibold prose-headings:tracking-tight prose-headings:text-zinc-900 prose-h1:text-2xl prose-p:leading-relaxed prose-p:text-zinc-500 prose-a:text-zinc-500 prose-a:underline-offset-2 prose-code:text-zinc-500 prose-pre:rounded-none prose-pre:px-3 prose-pre:py-5 prose-pre:leading-relaxed prose-pre:shadow-sm prose-pre:ring-1 prose-pre:ring-zinc-200/50"
+      >
+        <div class="space-y-6">
+          <a
+            href="/"
+            class="inline-flex items-center gap-2 text-zinc-600 no-underline"
+          >
+            <i data-lucide="arrow-left" class="size-4"></i>Back to home
+          </a>
+          <div class="mt-[2px] flex-shrink-0 text-sm font-medium text-zinc-400">
+            {publishDate.toISOString().substring(0, 10)}
+          </div>
+        </div>
+        <slot />
+      </article>
+
+      <Footer />
+    </main>
+
+    <script>
+      import { createIcons, ArrowLeft } from "lucide"
+
+      createIcons({
+        icons: {
+          ArrowLeft,
+        },
+      })
+    </script>
+  </body>
+</html>

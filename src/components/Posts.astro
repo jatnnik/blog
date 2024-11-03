@@ -2,12 +2,6 @@
 import SectionTitle from "./SectionTitle.astro"
 import { getCollection } from "astro:content"
 
-// const posts = (await getCollection("posts"))
-//   .filter((post) => (import.meta.env.DEV ? true : post.data.published))
-//   .sort(
-//     (a, b) =>
-//       new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime(),
-//   )
 const posts = await getCollection("posts", ({ data }) => {
   return import.meta.env.PROD ? data.isDraft !== true : true
 })

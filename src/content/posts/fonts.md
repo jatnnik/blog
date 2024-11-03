@@ -4,6 +4,8 @@ publishDate: 2024-02-13
 isDraft: false
 ---
 
+# Beautiful Fonts
+
 A (growing) collection of beautiful fonts that I like to use. ~All~ Most of them are available on Google Fonts.
 
 - Bricolage Grotesque

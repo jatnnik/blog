@@ -8,7 +8,7 @@ export default defineConfig({
   integrations: [tailwind()],
   markdown: {
     shikiConfig: {
-      theme: "catppuccin-frappe",
+      theme: "one-light",
     },
   },
   output: "static",
