@@ -8,7 +8,7 @@ isDraft: false
 
 [shadcn-ui](https://ui.shadcn.com/) contains a nifty utility function to conditionally merge Tailwind classes.
 
-Note: Install `clsx` and `tailwind-merge` to use this.
+**Note:** Install `clsx` and `tailwind-merge` to use this.
 
 ```tsx
 import { clsx, type ClassValue } from "clsx"

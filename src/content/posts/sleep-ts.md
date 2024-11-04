@@ -6,7 +6,7 @@ isDraft: false
 
 # How to sleep in TypeScript
 
-This is a handy one-liner for putting your TypeScript code to sleep when needed:
+This is a handy one-liner for delaying code execution in TypeScript:
 
 ```ts
 const sleep = (ms: number) => new Promise(resolve, setTimeout(resolve, ms))
