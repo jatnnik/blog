@@ -1,7 +1,7 @@
 ---
 title: The first thing I do in a fresh Laravel app
 publishDate: 2024-11-04
-isDraft: true
+isDraft: false
 ---
 
 # The first thing I do in a fresh Laravel app
