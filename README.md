@@ -1,3 +1,3 @@
-# jannbar
+# jatnnik.dev
 
-This is the code for my personal blog!
+The code for my personal blog. Built with Astro.
