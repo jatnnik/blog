@@ -10,7 +10,7 @@ const { link, label, icon, alt } = Astro.props
 ---
 
 <a
-  class="inline-flex items-center space-x-1.5 rounded-md border border-zinc-200 px-2 py-1 text-xs font-medium shadow-sm outline-none focus-visible:ring-2 focus-visible:ring-zinc-500 focus-visible:ring-offset-2"
+  class="inline-flex min-w-max items-center space-x-1.5 rounded-md border border-zinc-200 px-2 py-1 text-xs font-medium shadow-sm outline-none focus-visible:ring-2 focus-visible:ring-zinc-500 focus-visible:ring-offset-2"
   href={link}
   target="_blank"
   title={alt}
@@ -25,18 +25,5 @@ const { link, label, icon, alt } = Astro.props
     decoding="async"
   />
   <span>{label}</span>
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    class="size-3 text-zinc-400"
-    ><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path
-      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg
-  >
+  <i data-lucide="external-link" class="size-3 shrink-0 text-zinc-500"></i>
 </a>
