@@ -5,5 +5,5 @@ export const SITE_INFO = {
 
 export const HANDLES = {
   GITHUB: "jatnnik",
-  BLUESKY: "jatnnik.bsky.social",
+  BLUESKY: "jatnnik.dev",
 }
