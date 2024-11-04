@@ -4,7 +4,7 @@ publishDate: 2024-02-28
 isDraft: false
 ---
 
-# How to merge Tailwind classes
+# Merging Tailwind Classes
 
 [shadcn-ui](https://ui.shadcn.com/) contains a nifty utility function to conditionally merge Tailwind classes.
 
