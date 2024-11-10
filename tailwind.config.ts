@@ -8,7 +8,6 @@ export default {
     extend: {
       fontFamily: {
         sans: ["InterVariable", ...defaultTheme.fontFamily.sans],
-        handwritten: ["Caveat", ...defaultTheme.fontFamily.serif],
       },
     },
   },
