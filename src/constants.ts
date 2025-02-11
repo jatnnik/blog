@@ -1,6 +1,6 @@
 export const SITE_INFO = {
   TITLE: "Jannik Baranczyk",
-  DESCRIPTION: "Full-Stack dev, climber, hobby barista.",
+  DESCRIPTION: "Full Stack dev, climber, hobby barista.",
 }
 
 export const HANDLES = {
