@@ -1,5 +1,6 @@
 ---
 import "@fontsource-variable/inter"
+import interWoff2 from "@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url"
 import "../styles/global.css"
 
 interface Props {
@@ -17,6 +18,15 @@ const { title, description } = Astro.props
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="icon" href="/favicon.svg" />
 <meta name="generator" content={Astro.generator} />
+
+<!-- Font -->
+<link
+  rel="preload"
+  as="font"
+  type="font/woff2"
+  href={interWoff2}
+  crossorigin="anonymous"
+/>
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalUrl} />
