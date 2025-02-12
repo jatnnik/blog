@@ -1,4 +1,7 @@
 ---
+import "@fontsource-variable/inter"
+import "../styles/global.css"
+
 interface Props {
   title: string
   description?: string
@@ -22,7 +25,3 @@ const { title, description } = Astro.props
 <title>{title}</title>
 <meta name="title" content={title} />
 {description && <meta name="description" content={description} />}
-
-<!-- Font -->
-<link rel="preconnect" href="https://rsms.me/" />
-<link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
