@@ -1,17 +1,23 @@
 import { defineConfig } from "astro/config"
 
-import tailwind from "@astrojs/tailwind"
+import sitemap from "@astrojs/sitemap"
 
-import sitemap from "@astrojs/sitemap";
+import tailwindcss from "@tailwindcss/vite"
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://jatnnik.dev",
-  integrations: [tailwind(), sitemap()],
+  integrations: [sitemap()],
+
   markdown: {
     shikiConfig: {
       theme: "one-light",
     },
   },
+
   output: "static",
+
+  vite: {
+    plugins: [tailwindcss()],
+  },
 })
