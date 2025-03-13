@@ -1,6 +1,7 @@
 ---
 title: Beautiful Fonts
 publishDate: 2024-02-13
+updatedDate: 2025-03-13
 isDraft: false
 ---
 
@@ -10,13 +11,17 @@ A (growing) collection of beautiful fonts that I like to use. ~All~ Most of them
 
 - Bricolage Grotesque
 - Figtree
+- Gabarito
+- Gambarino
+- Hanken Grotesk
+- Instrument Sans/Serif
 - Inter
+- JetBrains Mono
 - Karla
 - Lexend
 - Newsreader
 - Operator Mono (paid)
 - Verlag (paid)
-- Hanken Grotesk
 
 ## Type Foundries
 
