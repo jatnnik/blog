@@ -70,3 +70,7 @@ public function boot(): void
     $this->configureDates();
 }
 ```
+
+## Update 2025-03-24
+
+I published a custom starter kit, [Bento](https://github.com/jatnnik/bento), which includes the customizations mentioned in this post and more.
