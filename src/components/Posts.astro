@@ -1,4 +1,5 @@
 ---
+import { formatDate } from "../util/formatDate"
 import SectionTitle from "./SectionTitle.astro"
 import { getCollection } from "astro:content"
 
@@ -24,7 +25,7 @@ const sortedPosts = posts.sort(
             datetime={post.data.publishDate.toISOString().substring(0, 10)}
             class="text-xs text-zinc-500"
           >
-            {post.data.publishDate.toISOString().substring(0, 10)}
+            {formatDate(post.data.publishDate)}
           </time>
           <a
             href={`/posts/${post.slug}`}

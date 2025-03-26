@@ -71,6 +71,6 @@ public function boot(): void
 }
 ```
 
-## Update 2025-03-24
+## Update on March 24, 2025
 
 I published a custom starter kit, [Bento](https://github.com/jatnnik/bento), which includes the customizations mentioned in this post and more.
