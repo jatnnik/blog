@@ -1,7 +1,7 @@
 ---
 title: Configuring Pint as a PHP formatter in Zed
-publishDate: 2024-07-16
-isDraft: false
+date: 2024-07-16
+isDraft: true
 ---
 
 # Configuring Pint as a PHP formatter in Zed

@@ -1,7 +1,6 @@
 ---
 title: Merging Tailwind Classes
-publishDate: 2024-02-28
-isDraft: false
+date: 2024-02-28
 ---
 
 # Merging Tailwind Classes

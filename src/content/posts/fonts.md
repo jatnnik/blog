@@ -1,8 +1,6 @@
 ---
 title: Beautiful Fonts
-publishDate: 2024-02-13
-updatedDate: 2025-03-13
-isDraft: false
+date: 2024-02-13
 ---
 
 # Beautiful Fonts

@@ -4,13 +4,11 @@ import SectionTitle from "./SectionTitle.astro"
 import { getCollection } from "astro:content"
 
 const posts = await getCollection("posts", ({ data }) => {
-  return import.meta.env.PROD ? data.isDraft !== true : true
+  return import.meta.env.PROD ? !data.isDraft : true
 })
 
 const sortedPosts = posts.sort(
-  (a, b) =>
-    new Date(b.data.publishDate).getTime() -
-    new Date(a.data.publishDate).getTime(),
+  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
 )
 ---
 
@@ -22,10 +20,10 @@ const sortedPosts = posts.sort(
       sortedPosts.map((post) => (
         <li>
           <time
-            datetime={post.data.publishDate.toISOString().substring(0, 10)}
+            datetime={post.data.date.toISOString().substring(0, 10)}
             class="text-xs text-zinc-500"
           >
-            {formatDate(post.data.publishDate)}
+            {formatDate(post.data.date)}
           </time>
           <a
             href={`/posts/${post.slug}`}

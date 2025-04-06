@@ -1,10 +1,9 @@
 ---
-title: The first thing I do in a fresh Laravel app
-publishDate: 2024-11-04
-isDraft: false
+title: The First Thing I Do in a Fresh Laravel App
+date: 2024-11-04
 ---
 
-# The first thing I do in a fresh Laravel app
+# The First Thing I Do in a Fresh Laravel App
 
 When I start a new Laravel app, the first thing I usually do is to add some opinionated configurations in the `boot` method of `AppServiceProvider.php`. I put each configuration into it's own method, to keep it clean. The methods can then be called inside `boot`.
 

@@ -1,10 +1,9 @@
 ---
-title: Use a separate database for running tests in Laravel
-publishDate: 2024-11-06
-isDraft: false
+title: Use a Separate Database for Running Tests in Laravel
+date: 2024-11-06
 ---
 
-# Use a separate database for running tests in Laravel
+# Use a Separate Database for Running Tests in Laravel
 
 One thing I _always_ stumble upon when creating a new Laravel app (with the Breeze starter kit) is the default behavior when running tests: By default, the whole database will be wiped out and re-created from scratch. This means that all data in the database will be gone after running tests!
 

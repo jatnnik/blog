@@ -1,10 +1,9 @@
 ---
-title: Some thoughts on AI
-publishDate: 2025-02-12
-isDraft: false
+title: Some Thoughts on AI
+date: 2025-02-12
 ---
 
-# Some thoughts on AI
+# Some Thoughts on AI
 
 AI is here to stay, that's for sure. It's a great tool for reviewing and refactoring code, writing tests, debugging problems etc.
 

@@ -1,10 +1,9 @@
 ---
-title: How to sleep in TypeScript
-publishDate: 2024-02-12
-isDraft: false
+title: How to Sleep in TypeScript
+date: 2024-02-12
 ---
 
-# How to sleep in TypeScript
+# How to Sleep in TypeScript
 
 This is a handy one-liner for delaying code execution in TypeScript:
 
