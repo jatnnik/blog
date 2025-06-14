@@ -5,3 +5,7 @@
   --font-sans: "Fira Sans", system-ui, sans-serif;
   --font-serif: "Source Serif 4", serif;
 }
+
+p > a {
+  @apply font-sans text-[#356da4] underline underline-offset-2;
+}
