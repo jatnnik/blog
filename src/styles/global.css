@@ -2,5 +2,6 @@
 @plugin '@tailwindcss/typography';
 
 @theme {
-  --font-sans: "Inter Variable", system-ui, sans-serif;
+  --font-sans: "Fira Sans", system-ui, sans-serif;
+  --font-serif: "Source Serif 4", serif;
 }

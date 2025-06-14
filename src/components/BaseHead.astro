@@ -1,6 +1,4 @@
 ---
-import "@fontsource-variable/inter"
-import interWoff2 from "@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url"
 import "../styles/global.css"
 
 interface Props {
@@ -16,16 +14,14 @@ const { title, description } = Astro.props
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="icon" href="/favicon.svg" />
+<link rel="icon" href="/favicon.png" />
 <meta name="generator" content={Astro.generator} />
 
-<!-- Font -->
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.bunny.net" />
 <link
-  rel="preload"
-  as="font"
-  type="font/woff2"
-  href={interWoff2}
-  crossorigin="anonymous"
+  href="https://fonts.bunny.net/css?family=fira-sans:400,500|source-serif-4:400,400i"
+  rel="stylesheet"
 />
 
 <!-- Canonical URL -->
