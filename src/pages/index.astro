@@ -1,21 +1,14 @@
 ---
-import { Image } from "astro:assets"
 import { getCollection } from "astro:content"
 
 import { SITE_INFO } from "../constants"
-import Portrait from "../assets/me.jpeg"
 
 import BaseHead from "../components/BaseHead.astro"
 import Container from "../components/Container.astro"
-import { formatDate } from "../util/formatDate"
-
-const posts = await getCollection("posts", ({ data }) => {
-  return import.meta.env.PROD ? !data.isDraft : true
-})
-
-const sortedPosts = posts.sort(
-  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
-)
+import Header from "../components/Header.astro"
+import Bio from "../components/Bio.astro"
+import Posts from "../components/Posts.astro"
+import Footer from "../components/Footer.astro"
 ---
 
 <!doctype html>
@@ -24,68 +17,17 @@ const sortedPosts = posts.sort(
     <BaseHead title={SITE_INFO.TITLE} description={SITE_INFO.DESCRIPTION} />
   </head>
   <body
-    class="h-full bg-white text-stone-900 antialiased selection:bg-amber-100"
+    class="selection:bg-accent/10 h-full bg-white text-stone-900 antialiased"
   >
     <Container>
-      <header class="flex items-center justify-between py-16">
-        <a href="/" class="inline-flex items-center gap-4">
-          <Image
-            src={Portrait}
-            loading="eager"
-            alt="A person wearing a dark hoodie and cap holds a compact camera up to their face, taking a photo outdoors in low light."
-            class="block aspect-square size-14 rounded-full border-2 border-white object-cover shadow"
-            width={112}
-            height={112}
-          />
-          <div>
-            <h1 class="font-medium text-black">Jannik Baranczyk</h1>
-            <span class="text-sm text-stone-700">
-              Full Stack Web Developer
-            </span>
-          </div>
-        </a>
-      </header>
+      <Header />
 
-      <main class="space-y-16 pb-32">
-        <section class="space-y-3 font-serif">
-          <p class="font-sans text-lg font-medium">Hello, friend.</p>
-          <p class="leading-relaxed text-stone-700">
-            I'm Jannik, a full stack web developer from Germany. I spend quite
-            some time with PHP, JS, HTML and CSS. In my free time, I enjoy
-            spending time with my wife, tinkering on little side projects, or
-            hanging out at the local climbing gym.
-          </p>
-
-          <p class="leading-relaxed text-stone-700">
-            My tools of choice are Laravel, Tailwind, React and Svelte.
-          </p>
-        </section>
-
-        <section class="space-y-3">
-          <h2 class="text-lg font-medium">Posts</h2>
-
-          <ul class="space-y-6">
-            {
-              sortedPosts.map((post) => (
-                <li>
-                  <a
-                    href={`/posts/${post.slug}`}
-                    class="mb-0.5 inline-block underline-offset-2 hover:underline"
-                  >
-                    <h3 class="font-medium">{post.data.title}</h3>
-                  </a>
-                  <time
-                    datetime={post.data.date.toISOString().substring(0, 10)}
-                    class="block text-xs text-stone-600"
-                  >
-                    {formatDate(post.data.date)}
-                  </time>
-                </li>
-              ))
-            }
-          </ul>
-        </section>
+      <main class="space-y-16">
+        <Bio />
+        <Posts />
       </main>
+
+      <Footer />
     </Container>
   </body>
 </html>

@@ -1,6 +1,5 @@
 ---
 import { formatDate } from "../util/formatDate"
-import SectionTitle from "./SectionTitle.astro"
 import { getCollection } from "astro:content"
 
 const posts = await getCollection("posts", ({ data }) => {
@@ -12,29 +11,29 @@ const sortedPosts = posts.sort(
 )
 ---
 
-<article class="flex flex-col gap-4">
-  <SectionTitle>Posts</SectionTitle>
+<section class="space-y-4">
+  <h2 class="text-lg font-medium">
+    <span class="text-accent tracking-tighte">##</span> Posts
+  </h2>
 
-  <ul class="space-y-4">
+  <ul class="space-y-6">
     {
       sortedPosts.map((post) => (
         <li>
+          <a
+            href={`/posts/${post.slug}`}
+            class="mb-0.5 inline-block underline-offset-2 hover:underline"
+          >
+            <h3 class="text-lg font-medium">{post.data.title}</h3>
+          </a>
           <time
             datetime={post.data.date.toISOString().substring(0, 10)}
-            class="text-xs text-zinc-500"
+            class="block text-sm text-stone-700"
           >
             {formatDate(post.data.date)}
           </time>
-          <a
-            href={`/posts/${post.slug}`}
-            class="underline-offset-2 hover:underline"
-          >
-            <article>
-              <h4 class="font-medium text-zinc-800">{post.data.title}</h4>
-            </article>
-          </a>
         </li>
       ))
     }
   </ul>
-</article>
+</section>

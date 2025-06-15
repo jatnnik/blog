@@ -1,11 +1,21 @@
 @import "tailwindcss";
 @plugin '@tailwindcss/typography';
 
+:root {
+  --link-color: #3873ad;
+  --accent-color: #ad7c37;
+}
+
 @theme {
   --font-sans: "Fira Sans", system-ui, sans-serif;
   --font-serif: "Source Serif 4", serif;
+
+  --color-link: var(--link-color);
+  --color-accent: var(--accent-color);
 }
 
-p > a {
-  @apply font-sans text-[#356da4] underline underline-offset-2;
+@layer base {
+  p > a {
+    @apply font-sans text-[#356da4] underline underline-offset-2;
+  }
 }

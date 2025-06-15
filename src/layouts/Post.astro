@@ -5,6 +5,7 @@ import me from "../assets/me.jpeg"
 import BaseHead from "../components/BaseHead.astro"
 import Footer from "../components/Footer.astro"
 import { formatDate } from "../util/formatDate"
+import { SITE_INFO } from "../constants"
 
 type Props = CollectionEntry<"posts">["data"] & {
   slug: string
@@ -31,13 +32,13 @@ const schema = JSON.stringify({
 <!doctype html>
 <html lang="en">
   <head>
-    <BaseHead title={title} />
+    <BaseHead title={`${title} | ${SITE_INFO.TITLE}`} />
     <script type="application/ld+json" set:html={schema} />
   </head>
   <body class="text-zinc-900 antialiased selection:bg-amber-100">
     <main class="space-y-16 py-16 md:py-32">
       <article
-        class="prose prose-headings:text-balance prose-headings:text-xl prose-headings:font-semibold prose-headings:tracking-tight prose-headings:text-zinc-900 prose-h1:text-2xl prose-p:leading-relaxed prose-a:font-normal prose-a:text-zinc-500 prose-a:underline-offset-2 prose-blockquote:text-zinc-500 prose-strong:font-medium prose-strong:text-zinc-700 prose-code:text-rose-500 prose-code:before:content-none prose-code:after:content-none prose-pre:rounded-md prose-pre:p-3 prose-pre:leading-loose prose-pre:shadow-xs prose-pre:ring-1 prose-pre:ring-zinc-200/50 mx-auto max-w-2xl px-6 text-zinc-500 [&_code:not(pre_code)]:rounded-md [&_code:not(pre_code)]:bg-white [&_code:not(pre_code)]:p-0.5 [&_code:not(pre_code)]:ring-1 [&_code:not(pre_code)]:ring-zinc-200/50"
+        class="prose prose-headings:text-balance prose-headings:text-xl prose-headings:font-semibold prose-headings:tracking-tight prose-headings:text-zinc-900 prose-h1:text-2xl prose-p:leading-relaxed prose-a:font-normal prose-a:text-zinc-500 prose-a:underline-offset-2 prose-blockquote:text-zinc-500 prose-strong:font-medium prose-strong:text-zinc-700 prose-code:text-rose-500 prose-code:before:content-none prose-code:after:content-none prose-pre:rounded-md prose-pre:p-3 prose-pre:leading-loose prose-pre:shadow-xs prose-pre:ring-1 prose-pre:ring-zinc-200/50 mx-auto max-w-2xl max-w-4xl px-6 text-zinc-500 [&_code:not(pre_code)]:rounded-md [&_code:not(pre_code)]:bg-white [&_code:not(pre_code)]:p-0.5 [&_code:not(pre_code)]:ring-1 [&_code:not(pre_code)]:ring-zinc-200/50"
       >
         <div class="flex items-center gap-3">
           <div

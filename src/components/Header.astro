@@ -1,69 +1,21 @@
 ---
 import { Image } from "astro:assets"
-import { HANDLES } from "../constants"
 import Portrait from "../assets/me.jpeg"
-import Tag from "./Tag.astro"
-import SectionTitle from "./SectionTitle.astro"
 ---
 
-<header class="flex flex-col gap-12">
-  <div class="flex flex-col gap-4 sm:flex-row sm:items-center">
-    <div
-      class="size-16 shrink-0 overflow-hidden rounded-full border border-white shadow-md shadow-zinc-200 sm:size-24"
-    >
-      <Image
-        src={Portrait}
-        loading="eager"
-        alt="Jannik"
-        class="block aspect-square h-full w-full object-cover"
-        width={96}
-        height={96}
-      />
+<header class="flex items-center justify-between py-16">
+  <a href="/" class="inline-flex items-center gap-4">
+    <Image
+      src={Portrait}
+      loading="eager"
+      alt="A person wearing a dark hoodie and cap holds a compact camera up to their face, taking a photo outdoors in low light."
+      class="block aspect-square size-16 rounded-full border-2 border-white object-cover shadow"
+      width={128}
+      height={128}
+    />
+    <div>
+      <h1 class="font-medium text-black">Jannik Baranczyk</h1>
+      <span class="text-sm text-stone-700"> Full Stack Web Developer </span>
     </div>
-    <div class="space-y-2">
-      <div>
-        <h1 class="scroll-m-20 text-xl font-semibold tracking-tighter">
-          Jannik Baranczyk
-        </h1>
-        <div class="text-sm text-zinc-500">
-          <p>Full Stack Dev, Climber, Hobby Barista.</p>
-        </div>
-      </div>
-      <div class="flex space-x-2">
-        <Tag
-          label={`@${HANDLES.GITHUB}`}
-          icon="/github.svg"
-          link={`https://github.com/${HANDLES.GITHUB}`}
-          alt="GitHub"
-        />
-        <Tag
-          label={`@${HANDLES.BLUESKY}`}
-          icon="/bluesky.png"
-          link={`https://bsky.app/profile/${HANDLES.BLUESKY}`}
-          alt="Bluesky"
-        />
-      </div>
-    </div>
-  </div>
-
-  <section class="space-y-2">
-    <div class="flex flex-col gap-4">
-      <SectionTitle>Hello, friend.</SectionTitle>
-
-      <p class="text-sm leading-relaxed text-zinc-500">
-        I currently work as a full stack developer at <a
-          href="https://360vier.de"
-          target="_blank"
-          class="font-medium underline underline-offset-2">360VIER</a
-        >. In my free time, I enjoy spending time with my wife, tinkering on
-        little side projects, or hanging out at the local climbing gym.
-      </p>
-
-      <p class="text-sm leading-relaxed text-zinc-500">
-        My go-to stack for web development is the <i>RILT</i> stack (React, Inertia,
-        Laravel, Tailwind). For more content centric sites (like this one), I like
-        Astro a lot.
-      </p>
-    </div>
-  </section>
+  </a>
 </header>
