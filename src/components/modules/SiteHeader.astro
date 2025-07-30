@@ -1,0 +1,38 @@
+---
+interface NavItem {
+  title: string
+  url: string
+}
+
+const navItems: NavItem[] = [
+  {
+    title: "Posts",
+    url: "/posts",
+  },
+  {
+    title: "About",
+    url: "/about",
+  },
+]
+---
+
+<header role="banner" class="site-header">
+  <div class="site-header__container repel">
+    <a href="/" class="site-header__logo repel">
+      <div class="site-header__logo-img"></div>
+      <span class="site-header__logo-text"> Jannik B. </span>
+    </a>
+
+    <nav class="navigation">
+      <ul class="cluster" role="list">
+        {
+          navItems.map((item) => (
+            <li>
+              <a href={item.url}>{item.title}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</header>

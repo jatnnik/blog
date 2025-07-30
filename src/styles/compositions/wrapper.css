@@ -1,0 +1,4 @@
+.wrapper {
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}

@@ -1,0 +1,30 @@
+/* 
+Global styles
+
+Low-specifity, global styles that apply to the whole project
+*/
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background: var(--color-light);
+  color: var(--color-dark);
+  font-family: var(--font-sans);
+  margin: 0;
+  padding-inline: 1rem;
+}
+
+::selection {
+  background: var(--color-selection-bg);
+  color: var(--color-selection-text);
+}
+
+a:not([class]) {
+  color: var(--color-global-link-color);
+  text-decoration: var(--global-style-link-text-decoration, revert);
+}
+
+a:not([class]):hover {
+  text-decoration: var(--global-style-link-hover-text-decoration, revert);
+  text-underline-offset: var(--global-style-link-hover-underline-offset);
+}
