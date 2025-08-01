@@ -1,19 +1,14 @@
-.site-header {
-  --site-header-height: 4rem;
-
-  border-block-end: var(--stroke);
+.site-header > .wrapper {
+  border-block: var(--frame-stroke);
+  border-inline: var(--frame-stroke);
 }
 
-.site-header__container {
-  padding-inline-end: var(--gutter);
-}
-
-a.site-header__logo {
+.site-header__logo {
   color: currentColor;
   text-decoration: none;
 }
 
-a.site-header__logo:hover {
+.site-header__logo:hover {
   text-decoration: var(--global-style-link-hover-text-decoration, revert);
   text-underline-offset: var(--global-style-link-hover-underline-offset);
 }
@@ -26,6 +21,6 @@ a.site-header__logo:hover {
 
 .site-header__logo-text {
   font-size: 1.125rem;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: -0.025em;
 }

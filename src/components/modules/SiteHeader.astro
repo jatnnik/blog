@@ -13,26 +13,33 @@ const navItems: NavItem[] = [
     title: "About",
     url: "/about",
   },
+  {
+    title: "Projects",
+    url: "/projects",
+  },
 ]
 ---
 
 <header role="banner" class="site-header">
-  <div class="site-header__container repel">
-    <a href="/" class="site-header__logo repel">
-      <div class="site-header__logo-img"></div>
-      <span class="site-header__logo-text"> Jannik B. </span>
-    </a>
+  <div class="wrapper">
+    <div class="wrapper repel" data-wrapper-type="inner">
+      <a href="/" class="site-header__logo">
+        <span class="site-header__logo-text">
+          <em>Jannik B.</em>
+        </span>
+      </a>
 
-    <nav class="navigation">
-      <ul class="cluster" role="list">
-        {
-          navItems.map((item) => (
-            <li>
-              <a href={item.url}>{item.title}</a>
-            </li>
-          ))
-        }
-      </ul>
-    </nav>
+      <nav class="navigation">
+        <ul class="cluster" role="list">
+          {
+            navItems.map((item) => (
+              <li>
+                <a href={item.url}>{item.title}</a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+    </div>
   </div>
 </header>

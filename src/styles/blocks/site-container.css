@@ -1,0 +1,5 @@
+.site-container {
+  margin-inline: auto;
+  max-width: var(--wrapper-max-width);
+  padding-inline: 1.5rem;
+}

@@ -1,0 +1,12 @@
+.hero-region {
+  text-align: center;
+}
+
+.hero-region h1 {
+  font-size: var(--text-6xl);
+}
+
+.hero-region__copy {
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+}

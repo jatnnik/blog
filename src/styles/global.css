@@ -2,16 +2,3 @@
 @import "./global/reset.css";
 @import "./global/variables.css";
 @import "./global/global-styles.css";
-
-/* Compositions */
-@import "./compositions/cluster.css";
-@import "./compositions/flow.css";
-@import "./compositions/repel.css";
-@import "./compositions/site-container.css";
-@import "./compositions/wrapper.css";
-
-/* Utilities */
-
-/* Blocks */
-@import "./blocks/navigation.css";
-@import "./blocks/site-header.css";

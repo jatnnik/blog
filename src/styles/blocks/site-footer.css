@@ -1,0 +1,11 @@
+.site-footer {
+  border-block-start: var(--frame-stroke);
+  font-size: var(--text-base);
+  font-weight: var(--font-medium);
+  text-align: center;
+}
+
+.site-footer > .wrapper {
+  border-block-end: var(--frame-stroke);
+  border-inline: var(--frame-stroke);
+}

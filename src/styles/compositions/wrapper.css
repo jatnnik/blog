@@ -1,4 +1,18 @@
 .wrapper {
-  margin-inline: auto;
-  padding-inline: var(--gutter);
+  padding-inline: var(--gutter-wrapper-inline, var(--gutter));
+}
+
+/* == EXCEPTIONS == */
+.wrapper[data-wrapper-type="inner"] {
+  min-width: 100%;
+  padding-block: var(--gutter-wrapper-inner-block, var(--gutter));
+  padding-inline: var(--gutter-wrapper-inner-inline, 0);
+}
+
+.wrapper[data-wrapper-type="end-only"] {
+  padding-inline-start: 0;
+}
+
+.wrapper[data-wrapper-type="start-only"] {
+  padding-inline-end: 0;
 }
