@@ -1,4 +1,5 @@
 .wrapper {
+  margin-inline: auto;
   padding-inline: var(--gutter-wrapper-inline, var(--gutter));
 }
 
@@ -15,4 +16,8 @@
 
 .wrapper[data-wrapper-type="start-only"] {
   padding-inline-end: 0;
+}
+
+.wrapper[data-wrapper-type="prose"] {
+  max-width: var(--prose-max-width);
 }

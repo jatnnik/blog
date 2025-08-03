@@ -24,9 +24,7 @@ const navItems: NavItem[] = [
   <div class="wrapper">
     <div class="wrapper repel" data-wrapper-type="inner">
       <a href="/" class="site-header__logo">
-        <span class="site-header__logo-text">
-          <em>Jannik B.</em>
-        </span>
+        <span class="site-header__logo-text">Jannik B.</span>
       </a>
 
       <nav class="navigation">
@@ -43,3 +41,26 @@ const navItems: NavItem[] = [
     </div>
   </div>
 </header>
+
+<style>
+  .site-header > .wrapper {
+    border-block-end: var(--frame-stroke);
+    border-block-start: var(--frame-stroke);
+  }
+
+  .site-header__logo {
+    color: currentColor;
+    text-decoration: none;
+  }
+
+  .site-header__logo:hover {
+    text-decoration: var(--global-style-link-hover-text-decoration, revert);
+    text-underline-offset: var(--global-style-link-hover-underline-offset);
+  }
+
+  .site-header__logo-text {
+    font-size: var(--text-base);
+    font-weight: var(--font-semibold);
+    letter-spacing: var(--kerning-tight);
+  }
+</style>

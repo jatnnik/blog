@@ -17,10 +17,6 @@ body {
   padding-block: 1.5rem;
 }
 
-main {
-  border-inline: var(--frame-stroke);
-}
-
 ::selection {
   background: var(--color-selection-bg);
   color: var(--color-selection-text);

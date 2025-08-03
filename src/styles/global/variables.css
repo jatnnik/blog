@@ -1,6 +1,6 @@
 :root {
   /* == COLORS == */
-  --color-light: oklch(98.5% 0.001 106.423);
+  --color-light: #fafafa;
   --color-dark: oklch(21.6% 0.006 56.043);
   --color-primary: #fdd000;
 
@@ -24,6 +24,8 @@
   --global-style-link-hover-underline-offset: 0.2lh;
 
   --leading: 1.5;
+  --kerning-tight: -0.025em;
+  --kerning-tighter: -0.05em;
 
   --text-ratio: 1.25;
   --text-base: 1rem;
@@ -41,11 +43,11 @@
   /* == SIZING == */
   --gutter: 1rem;
 
-  --gutter-wrapper-inner-inline: var(--gutter);
+  --gutter-wrapper-inner-inline: 0;
   --gutter-wrapper-inner-block: var(--gutter);
 
   --prose-max-width: 60ch;
-  --wrapper-max-width: 1680px;
+  --wrapper-max-width: 1280px;
 
   /* == MISCELLANEOUS == */
   --frame-stroke: 1px solid var(--color-dark);

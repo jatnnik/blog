@@ -1,14 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro"
+import Hero from "../components/pages/home/Hero.astro"
+import LatestPosts from "../components/pages/home/LatestPosts.astro"
 ---
 
 <Layout>
-  <section class="[ region ] [ hero-region ]">
-    <div class="wrapper flow">
-      <h1>Jannik B.</h1>
-      <p class="hero-region__copy">
-        <em>Fullstack developer with a faible for Laravel and CSS</em>
-      </p>
-    </div>
-  </section>
+  <Hero />
+  <LatestPosts />
 </Layout>
