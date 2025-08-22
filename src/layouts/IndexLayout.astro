@@ -15,24 +15,18 @@ const { title, description } = Astro.props
 <BaseLayout>
   <BaseHead title={title} description={description} slot="head" />
 
-  <div class="page-content | flow">
+  <main>
     <div class="main-grid">
-      <Header title={siteConfig.title} data-main-grid-position="center" />
+      <article data-main-grid-area="content" class="flow">
+        <Header title={siteConfig.title} data-main-grid-area="content" />
+        <slot />
+      </article>
     </div>
-
-    <main>
-      <div class="main-grid">
-        <article data-main-grid-position="center">
-          <slot />
-        </article>
-      </div>
-    </main>
-  </div>
+  </main>
 </BaseLayout>
 
-<style is:global>
-  .page-content {
-    margin-inline: auto;
-    max-width: var(--page-width);
+<style>
+  article {
+    --flow-space: 2.5em;
   }
 </style>

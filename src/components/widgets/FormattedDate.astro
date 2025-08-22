@@ -1,0 +1,14 @@
+---
+import { formatDate } from '@/utils/date'
+
+interface Props {
+  date: Date
+  context?: 'post' | 'list' | 'default'
+}
+
+const { date, context = 'default' } = Astro.props
+---
+
+<time datetime={date.toISOString()}>
+  <Fragment set:html={formatDate(date)} />
+</time>

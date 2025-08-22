@@ -1,6 +1,6 @@
 ---
-title: "Git: Case-Sensitive File Renaming"
-date: 2025-04-23
+title: 'Git: Case-Sensitive File Renaming'
+pubDate: 2025-04-23
 ---
 
 # Git: Case-Sensitive File Renaming

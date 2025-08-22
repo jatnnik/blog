@@ -1,6 +1,6 @@
 ---
 title: Some Thoughts on AI
-date: 2025-02-12
+pubDate: 2025-02-12
 ---
 
 # Some Thoughts on AI

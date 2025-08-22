@@ -1,0 +1,35 @@
+/* == MAIN GRID == */
+.main-grid {
+  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 1rem;
+}
+
+[data-main-grid-area='*'] {
+  grid-column: 1;
+}
+
+@media (width > 768px) {
+  .main-grid {
+    grid-template-columns: auto var(--content-width) auto;
+  }
+
+  [data-main-grid-area='sidebar-left'] {
+    grid-column: 1;
+  }
+
+  [data-main-grid-area='content'] {
+    grid-column: 2;
+  }
+
+  [data-main-grid-area='sidebar-right'] {
+    grid-column: 3;
+  }
+}
+
+@media (width > 1024px) {
+  .main-grid {
+    column-gap: 1.5rem;
+  }
+}

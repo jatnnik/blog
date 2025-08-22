@@ -1,5 +1,5 @@
 .prose {
-  --flow-space: 1.25em;
+  --flow-space: 1.125em;
 
   font-size: var(--text-size-sm);
 }

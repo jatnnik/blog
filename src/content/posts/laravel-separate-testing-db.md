@@ -1,6 +1,6 @@
 ---
 title: Use a Separate Database for Running Tests in Laravel
-date: 2024-11-06
+pubDate: 2024-11-06
 ---
 
 # Use a Separate Database for Running Tests in Laravel

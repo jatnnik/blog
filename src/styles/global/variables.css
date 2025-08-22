@@ -33,7 +33,7 @@
   --kerning-tight: -0.02em;
 
   --text-size-xs: 0.79rem;
-  --text-size-sm: 0.889rem;
+  --text-size-sm: 0.9375rem;
   --text-size-base: 1rem;
   --text-size-lg: 1.125rem;
   --text-size-xl: 1.266rem;
@@ -43,14 +43,14 @@
   --text-size-5xl: 2.027rem;
 
   /* == SIZINGS == */
-  --content-width: 40rem;
+  --content-width: 35rem;
+  --page-width: 67rem;
+
   --flow-space: 1.5em;
 
   --gutter-sm: 1rem;
   --gutter: 1.125rem;
   --gutter-lg: 1.25rem;
-
-  --page-width: 67rem;
 
   /* == ANIMATIONS & TRANSITIONS */
   --transition-link: 240ms;

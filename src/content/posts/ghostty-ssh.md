@@ -1,6 +1,6 @@
 ---
 title: Fixing the Backspace Key in Ghostty SSH Sessions
-date: 2025-01-07
+pubDate: 2025-01-07
 ---
 
 # Fixing the Backspace Key in Ghostty SSH Sessions

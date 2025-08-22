@@ -1,6 +1,6 @@
 ---
 title: Merging Tailwind Classes
-date: 2024-02-28
+pubDate: 2024-02-28
 ---
 
 # Merging Tailwind Classes
@@ -10,8 +10,8 @@ date: 2024-02-28
 **Note:** Install `clsx` and `tailwind-merge` to use this.
 
 ```tsx
-import { clsx, type ClassValue } from "clsx"
-import { twMerge } from "tailwind-merge"
+import { clsx, type ClassValue } from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))

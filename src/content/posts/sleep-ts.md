@@ -1,6 +1,6 @@
 ---
 title: How to Sleep in TypeScript
-date: 2024-02-12
+pubDate: 2024-02-12
 ---
 
 # How to Sleep in TypeScript

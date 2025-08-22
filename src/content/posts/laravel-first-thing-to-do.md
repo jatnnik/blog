@@ -1,6 +1,6 @@
 ---
 title: The First Thing I Do in a Fresh Laravel App
-date: 2024-11-04
+pubDate: 2024-11-04
 ---
 
 # The First Thing I Do in a Fresh Laravel App
