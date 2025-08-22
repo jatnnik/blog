@@ -1,10 +1,9 @@
 ---
-import Layout from "../layouts/Layout.astro"
-import Hero from "../components/pages/home/Hero.astro"
-import LatestPosts from "../components/pages/home/LatestPosts.astro"
+import About from '@/components/widgets/About.astro'
+import { siteConfig } from '@/config'
+import IndexLayout from '@/layouts/IndexLayout.astro'
 ---
 
-<Layout>
-  <Hero />
-  <LatestPosts />
-</Layout>
+<IndexLayout title={siteConfig.title} description={siteConfig.description}>
+  <About />
+</IndexLayout>

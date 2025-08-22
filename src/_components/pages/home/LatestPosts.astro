@@ -1,0 +1,45 @@
+---
+import { formatDate } from "../../../util/formatDate"
+import { getCollection } from "astro:content"
+
+const posts = await getCollection("posts")
+
+const sortedPosts = posts.sort(
+  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
+)
+---
+
+<section class="[ region ] [ latest-posts-region ]">
+  <div class="wrapper flow" data-wrapper-type="prose">
+    <h2>Latest Posts</h2>
+
+    <ul>
+      {
+        sortedPosts.map((post) => (
+          <li>
+            <time
+              datetime={post.data.date.toISOString().substring(0, 10)}
+              class="text-xs text-zinc-500"
+            >
+              {formatDate(post.data.date)}
+            </time>
+            <a
+              href={`/posts/${post.slug}`}
+              class="underline-offset-2 hover:underline"
+            >
+              <article>
+                <h4 class="font-medium text-zinc-800">{post.data.title}</h4>
+              </article>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
+
+<style>
+  h2 {
+    font-size: var(--text-2xl);
+  }
+</style>

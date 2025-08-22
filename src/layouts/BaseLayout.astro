@@ -1,0 +1,15 @@
+---
+import { siteConfig } from '@/config'
+
+const language = siteConfig.language || 'en-US'
+---
+
+<!doctype html>
+<html lang={language}>
+  <head>
+    <slot name="head" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

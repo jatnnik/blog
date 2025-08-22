@@ -1,0 +1,19 @@
+.prose {
+  --flow-space: 1.25em;
+
+  font-size: var(--text-size-sm);
+}
+
+.prose > :first-child {
+  margin-block-start: 0;
+}
+
+.prose em {
+  font-family: var(--font-serif);
+  font-size: calc(1em + 3px);
+  font-weight: var(--font-normal);
+}
+
+.prose a {
+  text-underline-offset: 0.15lh;
+}

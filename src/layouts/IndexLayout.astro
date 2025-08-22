@@ -1,0 +1,38 @@
+---
+import BaseHead from '@/components/layout/BaseHead.astro'
+import Header from '@/components/layout/Header.astro'
+import { siteConfig } from '@/config'
+import BaseLayout from '@/layouts/BaseLayout.astro'
+
+interface Props {
+  title: string
+  description: string
+}
+
+const { title, description } = Astro.props
+---
+
+<BaseLayout>
+  <BaseHead title={title} description={description} slot="head" />
+
+  <div class="page-content | flow">
+    <div class="main-grid">
+      <Header title={siteConfig.title} data-main-grid-position="center" />
+    </div>
+
+    <main>
+      <div class="main-grid">
+        <article data-main-grid-position="center">
+          <slot />
+        </article>
+      </div>
+    </main>
+  </div>
+</BaseLayout>
+
+<style is:global>
+  .page-content {
+    margin-inline: auto;
+    max-width: var(--page-width);
+  }
+</style>

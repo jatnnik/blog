@@ -1,4 +1,68 @@
-/* Global */
-@import "./global/reset.css";
-@import "./global/variables.css";
-@import "./global/global-styles.css";
+@import './global/reset.css';
+@import './global/variables.css';
+@import './compositions.css';
+@import './blocks/prose.css';
+
+body {
+  --gutter-multiplier: 2;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background: var(--color-light);
+  color: var(--color-dark);
+  font-family: var(--font-sans);
+  font-feature-settings:
+    'liga' 1,
+    'calt' 1;
+  font-size: var(--text-size-base);
+  line-height: var(--leading);
+  margin: 0;
+  padding: var(--gutter);
+  padding-block-start: calc(var(--gutter) * var(--gutter-multiplier));
+  text-rendering: optimizeLegibility;
+
+  @media screen and (width >= 768px) {
+    --gutter-multiplier: 7;
+  }
+}
+
+::selection {
+  background: var(--color-selection-bg);
+  color: var(--color-selection-text);
+}
+
+a:not([class]) {
+  color: var(--color-global-link-color);
+  text-decoration-color: var(--color-dark-25);
+  text-decoration-line: var(--global-style-link-text-decoration, revert);
+  text-underline-offset: var(--global-style-link-underline-offset);
+  transition: var(--transition-link);
+}
+
+a:not([class]):hover {
+  text-decoration-color: var(--color-dark-50);
+  text-decoration-line: var(--global-style-link-hover-text-decoration, revert);
+  text-underline-offset: var(--global-style-link-underline-offset);
+}
+
+/* 
+h1 {
+  font-size: var(--text-4xl);
+}
+
+h2 {
+  font-size: var(--text-3xl);
+}
+
+h3 {
+  font-size: var(--text-2xl);
+}
+
+h4 {
+  font-size: var(--text-xl);
+}
+
+:not(.prose) :where(h1, h2, h3, h4, h5, h6) {
+  margin-block: 0;
+} */
