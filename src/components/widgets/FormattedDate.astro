@@ -1,14 +1,14 @@
 ---
-import { formatDate } from '@/utils/date'
+import { formatDate, type DateContext } from '@/utils/date'
 
 interface Props {
   date: Date
-  context?: 'post' | 'list' | 'default'
+  context: DateContext
 }
 
-const { date, context = 'default' } = Astro.props
+const { date, context } = Astro.props
 ---
 
 <time datetime={date.toISOString()}>
-  <Fragment set:html={formatDate(date)} />
+  <Fragment set:html={formatDate(date, context)} />
 </time>

@@ -9,27 +9,92 @@ interface Props {
 const { posts } = Astro.props
 ---
 
-<ul role="list">
-  {
-    posts.map((post) => (
-      <li>
-        <a href={`/${post.id}`} class="post-list-item">
-          <p class="post-title">{post.data.title}</p>
-          <p class="post-date">
-            <FormattedDate date={post.data.pubDate} context="list" />
-          </p>
-        </a>
-      </li>
-    ))
-  }
-</ul>
+<section id="writing">
+  <h2 class="font-serif">Writing</h2>
+  <ul role="list" class="post-list">
+    {
+      posts.map((post) => (
+        <li>
+          <a href={`/blog/${post.id}`} title={post.data.title}>
+            <div class="post-list-item | cluster" data-nowrap>
+              <p class="post-list-item__title">{post.data.title}</p>
+              <div class="post-list-item__divider" />
+              <p class="post-list-item__date">
+                <FormattedDate date={post.data.pubDate} context="list" />
+              </p>
+            </div>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</section>
 
 <style>
-  ul {
+  #writing h2 {
+    font-size: var(--text-size-xl);
+    font-weight: var(--font-normal);
+    margin-block-start: 0;
+  }
+
+  .post-list {
+    display: flex;
+    flex-direction: column;
     padding-inline: 0;
   }
 
-  .post-list-item {
+  .post-list a {
+    font-size: var(--text-size-sm);
     text-decoration: none;
+    transition: opacity 120ms;
+  }
+
+  .post-list:hover a {
+    opacity: 0.5;
+  }
+
+  .post-list:hover a:hover {
+    opacity: 1;
+  }
+
+  .post-list-item {
+    --cluster-gutter: 0.75rem;
+
+    padding-block: 0.5rem;
+  }
+
+  .post-list-item__title {
+    flex-shrink: 1;
+    line-height: 1.5;
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .post-list-item__divider {
+    align-self: center;
+    flex: 1 1 auto;
+    /* min-width: 3rem; */
+    height: 0.5px;
+    background-color: var(--color-mono-400);
+  }
+
+  .post-list-item__date {
+    color: var(--color-mono-400);
+    flex-shrink: 0;
+    font-feature-settings:
+      'tnum' 1,
+      'zero' 0,
+      'cv01' 1,
+      'cv02' 1,
+      'calt' 1,
+      'ss03' 1,
+      'ordn' 1;
+    font-variant-numeric: tabular-nums;
+    font-weight: 350;
+    letter-spacing: -0.05em;
+    text-align: end;
+    white-space: nowrap;
   }
 </style>

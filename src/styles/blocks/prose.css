@@ -1,7 +1,9 @@
 .prose {
-  --flow-space: 1.125em;
-
   font-size: var(--text-size-sm);
+}
+
+.prose.flow > * {
+  --flow-space: 1.125em;
 }
 
 .prose > :first-child {
