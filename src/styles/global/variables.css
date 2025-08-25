@@ -2,15 +2,23 @@
   /* == COLORS == */
   --color-light: #fff;
 
-  --color-dark: #171717;
-  --color-dark-25: color-mix(in hsl, var(--color-dark) 25%, transparent);
-  --color-dark-50: color-mix(in hsl, var(--color-dark) 50%, transparent);
+  --color-mono-900: oklch(0.1 0 0);
+  --color-mono-800: oklch(0.2 0 0);
+  --color-mono-700: oklch(0.3 0 0);
+  --color-mono-600: oklch(0.4 0 0);
+  --color-mono-500: oklch(0.5 0 0);
+  --color-mono-400: oklch(0.6 0 0);
+  --color-mono-300: oklch(0.7 0 0);
+  --color-mono-200: oklch(0.8 0 0);
+  --color-mono-100: oklch(0.9 0 0);
+  --color-mono-50: oklch(0.95 0 0);
 
-  --color-mono: #6f6f6f;
+  --color-dark: var(--color-mono-900);
+
   --color-primary: olive;
 
   --color-global-link-color: currentColor;
-  --color-selection-bg: oklch(0.962 0.059 95.617);
+  --color-selection-bg: oklch(93.6% 0.032 17.717);
   --color-selection-text: currentColor;
 
   /* == TYPOGRAPHY == */
@@ -43,8 +51,8 @@
   --text-size-5xl: 2.027rem;
 
   /* == SIZINGS == */
-  --content-width: 35rem;
-  --page-width: 67rem;
+  --content-width: 560px;
+  --page-width: 1072px;
 
   --flow-space: 1.5em;
 

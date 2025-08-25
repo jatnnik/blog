@@ -35,14 +35,14 @@ body {
 }
 
 :where(a:not([class])) {
-  text-decoration-color: var(--color-dark-25);
+  text-decoration-color: var(--color-mono-100);
   text-decoration-line: var(--global-style-link-text-decoration, revert);
   text-underline-offset: var(--global-style-link-underline-offset);
   transition: var(--transition-link);
 }
 
 :where(a:not([class]):hover) {
-  text-decoration-color: var(--color-dark-50);
+  text-decoration-color: var(--color-mono-300);
   text-decoration-line: var(--global-style-link-hover-text-decoration, revert);
   text-underline-offset: var(--global-style-link-underline-offset);
 }
