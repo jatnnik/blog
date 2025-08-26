@@ -1,5 +1,6 @@
 .prose {
   font-size: var(--text-size-sm);
+  text-wrap: pretty;
 }
 
 .prose.flow > * {

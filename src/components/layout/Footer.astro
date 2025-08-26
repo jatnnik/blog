@@ -1,11 +1,19 @@
 <footer>
-  &copy; {new Date().getFullYear()} – Written by a human
+  <div class="repel">
+    <div>
+      &copy; {new Date().getFullYear()}
+    </div>
+    <div>
+      Built with <a href="https://astro.build" target="_blank" rel="noopener">Astro</a> & without AI.
+    </div>
+  </div>
 </footer>
 
 <style>
   footer {
+    border-block-start: 1px solid var(--color-mono-200);
     color: var(--color-mono-400);
     font-size: var(--text-size-xs);
-    text-align: center;
+    padding: 1rem;
   }
 </style>
