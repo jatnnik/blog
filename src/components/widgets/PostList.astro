@@ -3,14 +3,19 @@ import FormattedDate from '@/components/widgets/FormattedDate.astro'
 import type { CollectionEntry } from 'astro:content'
 
 interface Props {
+  heading: string
   posts: CollectionEntry<'posts'>[]
+  showReadMore?: boolean
 }
 
-const { posts } = Astro.props
+const { posts, heading, showReadMore = false } = Astro.props
 ---
 
-<section id="writing">
-  <h2 class="font-serif"><em>Writing</em></h2>
+<section id="writing" class="flow">
+  <h2 class="post-list__heading">
+    <em>{heading}</em>
+  </h2>
+
   <ul role="list" class="post-list">
     {
       posts.map((post) => (
@@ -28,13 +33,26 @@ const { posts } = Astro.props
       ))
     }
   </ul>
+
+  <div class="post-list__footer">
+    {showReadMore && <a href="/blog">Read more &rarr;</a>}
+  </div>
 </section>
 
 <style>
-  #writing h2 {
-    font-size: var(--text-size-xl);
+  #writing > * {
+    --flow-space: 1em;
+  }
+
+  .post-list__heading {
+    font-family: var(--font-serif);
+    font-size: calc(var(--text-size-lg) + 3px);
     font-weight: var(--font-normal);
     margin-block-start: 0;
+  }
+
+  :where(ul) {
+    margin-block: 0;
   }
 
   .post-list {
@@ -47,7 +65,7 @@ const { posts } = Astro.props
     display: block;
     font-size: var(--text-size-sm);
     text-decoration: none;
-    transition: opacity 120ms;
+    transition: opacity 60ms ease-in-out;
   }
 
   .post-list:hover a {
@@ -97,5 +115,16 @@ const { posts } = Astro.props
     letter-spacing: -0.05em;
     text-align: end;
     white-space: nowrap;
+  }
+
+  .post-list__footer a {
+    color: var(--color-mono-500);
+    font-size: var(--text-size-sm);
+    font-style: italic;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 </style>
