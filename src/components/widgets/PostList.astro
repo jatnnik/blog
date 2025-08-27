@@ -10,7 +10,7 @@ const { posts } = Astro.props
 ---
 
 <section id="writing">
-  <h2 class="font-serif">Writing</h2>
+  <h2 class="font-serif"><em>Writing</em></h2>
   <ul role="list" class="post-list">
     {
       posts.map((post) => (
@@ -44,13 +44,14 @@ const { posts } = Astro.props
   }
 
   .post-list a {
+    display: block;
     font-size: var(--text-size-sm);
     text-decoration: none;
     transition: opacity 120ms;
   }
 
   .post-list:hover a {
-    opacity: 0.5;
+    opacity: 0.4;
   }
 
   .post-list:hover a:hover {
