@@ -15,6 +15,11 @@ export default defineConfig({
     },
   },
 
+  build: {
+    format: 'directory',
+  },
+  trailingSlash: 'always',
+
   output: "static",
 
   vite: {
