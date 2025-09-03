@@ -20,7 +20,7 @@
   --color-primary-glare: color-mix(in oklch, var(--color-primary) 30%, transparent);
 
   --color-global-link-color: currentColor;
-  --color-selection-bg: var(--color-mono-50);
+  --color-selection-bg: var(--color-mono-100);
   --color-selection-text: currentColor;
 
   /* == TYPOGRAPHY == */
